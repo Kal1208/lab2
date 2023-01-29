@@ -4,14 +4,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-p 
-{
-  border: 2px solid black;
-  outline: #800080 solid 10px;
-  margin: auto;  
-  padding: 20px;
-  text-align: center;
-}
 
 body 
 {
@@ -29,6 +21,7 @@ h2
 font-family: verdana;
 font-size: 30px;
 color:white;
+text-align: center;
 }
 
 p 
@@ -76,6 +69,31 @@ color: white;
 <p>4. Danganronpa 2: Goodbye Despair</p>
 <p> <img src="https://assets1.ignimgs.com/2019/07/17/fire-emblem-three-houses---button-fin-1563322090834.jpg?width=300&crop=1%3A1%2Csmart" alt="FE3h" width="250" height="250"></p>
 <p>5. Fire Emblem: Three Houses</p>
+
+<h2>Rate my personal webpage!</h2>
+
+<p>Rate my page with a score of 1-10:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("numb").value;
+  // If x is Not a Number or less than one or greater than 10
+  let text;
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid only numbers 1-10 is allowed";
+  } else {
+    text = "Thank you for rating my page!";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
 
 </body>
 </html>
